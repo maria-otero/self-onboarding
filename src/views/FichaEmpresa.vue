@@ -80,7 +80,35 @@
 
                   <!-- RS Representante Legal-->
                   <v-container grid-list-lg>
-
+                     <h3>{{ RSRepresentLegal.titulo }}</h3>
+                     <v-layout row wrap>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>RUT</label>
+                              <p>{{ RSRepresentLegal.rut }}</p>
+                           </div>
+                        </v-flex>
+                     </v-layout>
+                     <v-layout row wrap>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Nombre</label>
+                              <p>{{ RSRepresentLegal.nombre }}</p>
+                           </div>
+                        </v-flex>
+                      <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Apellido 1</label>
+                              <p>{{ RSRepresentLegal.apellido1 }}</p>
+                           </div>
+                        </v-flex>
+                      <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Apellido 2</label>
+                              <p>{{ RSRepresentLegal.apellido2 }}</p>
+                           </div>
+                        </v-flex>                 
+                     </v-layout>                      
                   </v-container>
                   <!--<v-card>
                      <v-container grid-list-lg >
@@ -124,8 +152,34 @@
                   </v-card>-->  
                   <!-- RS Representante Legal fin -->  
 
+
+
                   <!-- RS Contacto-->
-                  <v-card>
+                  <v-container grid-list-lg>
+                     <h3>{{ RSContacto.titulo }}</h3>
+                     <v-layout row wrap>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Teléfono</label>
+                              <p>{{ RSContacto.telefono }}</p>
+                           </div>
+                        </v-flex>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Email</label>
+                              <p>{{ RSContacto.email }}</p>
+                           </div>
+                        </v-flex>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Sitio web</label>
+                              <p>{{ RSContacto.web }}</p>
+                           </div>
+                        </v-flex>                        
+                     </v-layout>
+
+                  </v-container>
+                  <!--<v-card>
                      <v-container grid-list-lg>
                         <h3>{{ RSContacto.titulo }}</h3>
                         <v-layout row wrap>
@@ -154,11 +208,50 @@
                               </v-flex>
                         </v-layout>
                      </v-container>
-                  </v-card>  
+                  </v-card>-->  
                   <!-- RS Contacto fin -->                   
 
+
+
                   <!-- RS Casa Matriz-->
-                  <v-card>
+                  <v-container grid-list-lg>
+                     <h3>{{ RSCasaMatriz.titulo }}</h3>
+                     <v-layout row wrap>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Calle</label>
+                              <p>{{ RSCasaMatriz.calle }}</p>
+                           </div>
+                        </v-flex>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Número</label>
+                              <p>{{ RSCasaMatriz.calleNumero }}</p>
+                           </div>
+                        </v-flex>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Número departamento</label>
+                              <p>{{ RSCasaMatriz.dptoNumero }}</p>
+                           </div>
+                        </v-flex>                
+                     </v-layout>
+                     <v-layout row wrap>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Comuna</label>
+                              <p>{{ RSCasaMatriz.comuna }}</p>
+                           </div>
+                        </v-flex>
+                        <v-flex xs12 sm4>
+                           <div class="static-text-field">
+                              <label>Región</label>
+                              <p>{{ RSCasaMatriz.region }}</p>
+                           </div>
+                        </v-flex>              
+                     </v-layout>                     
+                  </v-container>
+                  <!--<v-card>
                      <v-container grid-list-lg>
                         <h3>{{ RSCasaMatriz.titulo }}</h3>
                         <v-layout row wrap>
@@ -203,7 +296,7 @@
                            </v-flex>                                                      
                         </v-layout>
                      </v-container>
-                  </v-card>  
+                  </v-card>--> 
                   <!-- RS Casa Matriz fin -->
 
                   <!-- RS Casa Matriz-->
@@ -261,7 +354,7 @@ export default {
             giro: 'Confección y Distribución de Alimentos'
          },
          RSRepresentLegal: { 
-            titulo: 'Representante Legal', 
+            titulo: 'Representante legal', 
             rut: '16.034.000-k', 
             nombre: 'Antonia', 
             apellido1: 'Fuentes', 
