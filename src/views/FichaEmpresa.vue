@@ -22,7 +22,30 @@
 
                   <!-- RS Info Básica -->
                   <v-card>
-                     <v-container grid-list-lg >
+                     <v-container grid-list-lg>
+                        <h3>{{ RSInfoBasica.titulo}}</h3>
+                        <v-layout row wrap>
+                           <v-flex xs12 sm4>
+                              <div class="static-text-field">
+                                 <label>RUT</label>
+                                 <p>{{ RSInfoBasica.rut }}</p>
+                              </div>
+                           </v-flex>
+                           <v-flex xs12 sm4>
+                              <div class="static-text-field">
+                                 <label>Nombre Razón Social</label>
+                                 <p>{{ RSInfoBasica.nombre }}</p>
+                              </div>
+                           </v-flex>
+                           <v-flex xs12 sm4>
+                              <div class="static-text-field">
+                                 <label>Giro</label>
+                                 <p>{{ RSInfoBasica.giro }}</p>
+                              </div>
+                           </v-flex>                          
+                        </v-layout>
+                     </v-container>
+                     <!--<v-container grid-list-lg >
                         <h3>{{ RSInfoBasica.titulo }}</h3>
                         <v-layout row wrap>
                               <v-flex xs12 sm6 md4 class="pa-4">
@@ -42,19 +65,24 @@
                               </v-flex>
                               <v-flex xs12 sm6 md4 class="pa-4">
                                  <v-text-field
-                                    value="Marlyboo"
-                                    label="Giro"
-                                    readonly
-                                    >
+                                 :value="RSInfoBasica.giro"
+                                 label="Giro"
+                                 readonly
+                                 >
                                  </v-text-field>
                               </v-flex>
                         </v-layout>
-                     </v-container>
+                     </v-container>-->  
                   </v-card>
                   <!-- RS Info Básica fin-->
 
+
+
                   <!-- RS Representante Legal-->
-                  <v-card>
+                  <v-container grid-list-lg>
+
+                  </v-container>
+                  <!--<v-card>
                      <v-container grid-list-lg >
                         <h3>{{ RSRepresentLegal.titulo }}</h3>
                         <v-layout row wrap>
@@ -93,7 +121,7 @@
                            </v-flex>
                         </v-layout>
                      </v-container>
-                  </v-card>  
+                  </v-card>-->  
                   <!-- RS Representante Legal fin -->  
 
                   <!-- RS Contacto-->
@@ -176,7 +204,25 @@
                         </v-layout>
                      </v-container>
                   </v-card>  
-                  <!-- RS Casa Matriz fin -->                                  
+                  <!-- RS Casa Matriz fin -->
+
+                  <!-- RS Casa Matriz-->
+                  <v-card>
+                     <v-container grid-list-lg>
+                        <h3>{{ RSCajaCompensacion.titulo }}</h3>
+                        <v-layout row wrap>
+                           <v-flex xs12 sm6 md4 class="pa-4" d-flex>
+                              <v-text-field
+                              :value="RSCajaCompensacion.institucion"
+                              label="Institucion"
+                              readonly
+                              ></v-text-field>
+                           </v-flex>          
+                        </v-layout>
+                     </v-container>
+                  </v-card>  
+                  <!-- RS Casa Matriz fin -->    
+
                </v-expansion-panel-content>
             </v-expansion-panel>
 
@@ -236,11 +282,8 @@ export default {
             region: 'Región Metropolitana'
          },
          RSCajaCompensacion: { 
-            titulo: 'Representante Legal', 
-            rut: '16.034.000-k', 
-            nombre: 'Antonia', 
-            apellido1: 'Fuentes', 
-            apellido2: 'Perez'
+            titulo: 'Caja de compensación', 
+            institucion: 'Caja los Andes', 
          },
          
       }
